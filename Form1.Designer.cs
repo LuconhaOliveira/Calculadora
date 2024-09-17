@@ -1,6 +1,6 @@
 ﻿namespace Calculadora
 {
-    partial class Form1
+    partial class frmLoading
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,16 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoading));
             pictureBox1 = new PictureBox();
-            progressBar1 = new ProgressBar();
+            pgbLoading = new ProgressBar();
             label1 = new Label();
+            tmrLoading = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
             // 
-            pictureBox1.Dock = DockStyle.Fill;
             pictureBox1.Image = Properties.Resources.utomp3_com___CHAVES_PERDIDO__O_CAMPEONATO_parte2_360P_Trim;
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
@@ -46,33 +47,40 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // progressBar1
+            // pgbLoading
             // 
-            progressBar1.Location = new Point(12, 12);
-            progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(776, 23);
-            progressBar1.TabIndex = 1;
+            pgbLoading.Location = new Point(12, 12);
+            pgbLoading.Maximum = 7;
+            pgbLoading.Name = "pgbLoading";
+            pgbLoading.Size = new Size(776, 23);
+            pgbLoading.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(0, 0);
+            label1.Location = new Point(140, 124);
             label1.Name = "label1";
             label1.Size = new Size(38, 15);
             label1.TabIndex = 2;
             label1.Text = "label1";
             // 
-            // Form1
+            // tmrLoading
+            // 
+            tmrLoading.Enabled = true;
+            tmrLoading.Interval = 1000;
+            tmrLoading.Tick += tmrLoading_Tick;
+            // 
+            // frmLoading
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(label1);
-            Controls.Add(progressBar1);
+            Controls.Add(pgbLoading);
             Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "Form1";
+            Name = "frmLoading";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Calculadora Mortal";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -83,7 +91,8 @@
         #endregion
 
         private PictureBox pictureBox1;
-        private ProgressBar progressBar1;
+        private ProgressBar pgbLoading;
         private Label label1;
+        private System.Windows.Forms.Timer tmrLoading;
     }
 }
