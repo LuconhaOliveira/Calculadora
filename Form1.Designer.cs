@@ -1,6 +1,6 @@
 ﻿namespace Calculadora
 {
-    partial class Form1
+    partial class frmLoading
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoading));
             pictureBox1 = new PictureBox();
             pgbLoading = new ProgressBar();
             label1 = new Label();
@@ -39,7 +39,6 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Dock = DockStyle.Fill;
             pictureBox1.Image = Properties.Resources.utomp3_com___CHAVES_PERDIDO__O_CAMPEONATO_parte2_360P_Trim;
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
@@ -59,7 +58,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(0, 0);
+            label1.Location = new Point(140, 124);
             label1.Name = "label1";
             label1.Size = new Size(38, 15);
             label1.TabIndex = 2;
@@ -69,8 +68,9 @@
             // 
             tmrLoading.Enabled = true;
             tmrLoading.Interval = 1000;
+            tmrLoading.Tick += tmrLoading_Tick;
             // 
-            // Form1
+            // frmLoading
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -80,7 +80,7 @@
             Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "Form1";
+            Name = "frmLoading";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Calculadora Mortal";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
