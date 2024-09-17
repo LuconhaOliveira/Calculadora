@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             pictureBox1 = new PictureBox();
-            progressBar1 = new ProgressBar();
+            pgbLoading = new ProgressBar();
             label1 = new Label();
+            tmrLoading = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -46,12 +48,13 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // progressBar1
+            // pgbLoading
             // 
-            progressBar1.Location = new Point(12, 12);
-            progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(776, 23);
-            progressBar1.TabIndex = 1;
+            pgbLoading.Location = new Point(12, 12);
+            pgbLoading.Maximum = 7;
+            pgbLoading.Name = "pgbLoading";
+            pgbLoading.Size = new Size(776, 23);
+            pgbLoading.TabIndex = 1;
             // 
             // label1
             // 
@@ -62,13 +65,18 @@
             label1.TabIndex = 2;
             label1.Text = "label1";
             // 
+            // tmrLoading
+            // 
+            tmrLoading.Enabled = true;
+            tmrLoading.Interval = 1000;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(label1);
-            Controls.Add(progressBar1);
+            Controls.Add(pgbLoading);
             Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -83,7 +91,8 @@
         #endregion
 
         private PictureBox pictureBox1;
-        private ProgressBar progressBar1;
+        private ProgressBar pgbLoading;
         private Label label1;
+        private System.Windows.Forms.Timer tmrLoading;
     }
 }
