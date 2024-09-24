@@ -78,6 +78,7 @@
             btn0.TabIndex = 0;
             btn0.Text = "0";
             btn0.UseVisualStyleBackColor = false;
+            btn0.Click += btn0_Click;
             // 
             // btnDot
             // 
@@ -92,6 +93,7 @@
             btnDot.TabIndex = 0;
             btnDot.Text = ",";
             btnDot.UseVisualStyleBackColor = false;
+            btnDot.Click += btnDot_Click_1;
             // 
             // btnEqual
             // 
@@ -120,6 +122,7 @@
             btn1.TabIndex = 0;
             btn1.Text = "1";
             btn1.UseVisualStyleBackColor = false;
+            btn1.Click += btn1_Click;
             // 
             // btn2
             // 
@@ -134,6 +137,7 @@
             btn2.TabIndex = 0;
             btn2.Text = "2";
             btn2.UseVisualStyleBackColor = false;
+            btn2.Click += btn2_Click;
             // 
             // btn3
             // 
@@ -148,6 +152,7 @@
             btn3.TabIndex = 0;
             btn3.Text = "3";
             btn3.UseVisualStyleBackColor = false;
+            btn3.Click += btn3_Click;
             // 
             // btnMore
             // 
@@ -162,6 +167,7 @@
             btnMore.TabIndex = 0;
             btnMore.Text = "+";
             btnMore.UseVisualStyleBackColor = false;
+            btnMore.Click += btnMore_Click;
             // 
             // btn4
             // 
@@ -176,6 +182,7 @@
             btn4.TabIndex = 0;
             btn4.Text = "4";
             btn4.UseVisualStyleBackColor = false;
+            btn4.Click += btn4_Click;
             // 
             // btn5
             // 
@@ -190,6 +197,7 @@
             btn5.TabIndex = 0;
             btn5.Text = "5";
             btn5.UseVisualStyleBackColor = false;
+            btn5.Click += btn5_Click;
             // 
             // btn7
             // 
@@ -204,6 +212,7 @@
             btn7.TabIndex = 0;
             btn7.Text = "7";
             btn7.UseVisualStyleBackColor = false;
+            btn7.Click += btn7_Click;
             // 
             // btn6
             // 
@@ -218,6 +227,7 @@
             btn6.TabIndex = 0;
             btn6.Text = "6";
             btn6.UseVisualStyleBackColor = false;
+            btn6.Click += btn6_Click;
             // 
             // btn8
             // 
@@ -232,6 +242,7 @@
             btn8.TabIndex = 0;
             btn8.Text = "8";
             btn8.UseVisualStyleBackColor = false;
+            btn8.Click += btn8_Click;
             // 
             // btn9
             // 
@@ -246,6 +257,7 @@
             btn9.TabIndex = 0;
             btn9.Text = "9";
             btn9.UseVisualStyleBackColor = false;
+            btn9.Click += btn9_Click_1;
             // 
             // btnLess
             // 
@@ -260,6 +272,7 @@
             btnLess.TabIndex = 0;
             btnLess.Text = "-";
             btnLess.UseVisualStyleBackColor = false;
+            btnLess.Click += btnLess_Click;
             // 
             // btnMult
             // 
@@ -274,6 +287,7 @@
             btnMult.TabIndex = 0;
             btnMult.Text = "X";
             btnMult.UseVisualStyleBackColor = false;
+            btnMult.Click += btnMult_Click;
             // 
             // btnPercentage
             // 
@@ -302,6 +316,7 @@
             btnClear.TabIndex = 0;
             btnClear.Text = "C";
             btnClear.UseVisualStyleBackColor = false;
+            btnClear.Click += btnClear_Click;
             // 
             // btnBackSpace
             // 
@@ -316,6 +331,7 @@
             btnBackSpace.TabIndex = 0;
             btnBackSpace.Text = "<X";
             btnBackSpace.UseVisualStyleBackColor = false;
+            btnBackSpace.Click += btnBackSpace_Click;
             // 
             // btnDiv
             // 
@@ -330,6 +346,7 @@
             btnDiv.TabIndex = 0;
             btnDiv.Text = "/";
             btnDiv.UseVisualStyleBackColor = false;
+            btnDiv.Click += btnDiv_Click;
             // 
             // txtVisor
             // 
@@ -349,7 +366,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.hqdefault;
+            BackgroundImage = Properties.Resources.acerto_de_contas;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(334, 511);
             Controls.Add(txtVisor);
