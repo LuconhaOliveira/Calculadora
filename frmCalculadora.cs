@@ -14,6 +14,7 @@ namespace Calculadora
     {
         double num1;
         bool alreadyDot = false;
+        string operador;
         public frmCalculadora()
         {
             InitializeComponent();
@@ -91,8 +92,7 @@ namespace Calculadora
         {
             if (alreadyDot == false)
             {
-                string dot = ".";
-                txtVisor.Text = $"{txtVisor.Text}{dot}";
+                txtVisor.Text = $"{txtVisor.Text}{","}";
                 alreadyDot = true;
             }
         }
@@ -100,21 +100,62 @@ namespace Calculadora
         private void btnMore_Click(object sender, EventArgs e)
         {
             num1 = Convert.ToDouble(txtVisor.Text);
+            txtVisor.Text = "";
+            operador = "+";
+            alreadyDot = false;
         }
 
         private void btnLess_Click(object sender, EventArgs e)
         {
             num1 = Convert.ToDouble(txtVisor.Text);
+            txtVisor.Text = "";
+            operador = "-";
+            alreadyDot = false;
         }
 
         private void btnMult_Click(object sender, EventArgs e)
         {
             num1 = Convert.ToDouble(txtVisor.Text);
+            txtVisor.Text = "";
+            operador = "*";
+            alreadyDot = false;
         }
 
         private void btnDiv_Click(object sender, EventArgs e)
         {
             num1 = Convert.ToDouble(txtVisor.Text);
+            txtVisor.Text = "";
+            operador = "/";
+            alreadyDot = false;
+        }
+
+
+        private void btnEqual_Click_1(object sender, EventArgs e)
+        {
+            if (operador == "+")
+            {
+                txtVisor.Text = (num1 + Convert.ToDouble(txtVisor.Text)).ToString();
+            }
+            if (operador == "-")
+            {
+                txtVisor.Text = (num1 - Convert.ToDouble(txtVisor.Text)).ToString();
+            }
+            if (operador == "*")
+            {
+                txtVisor.Text = (num1 * Convert.ToDouble(txtVisor.Text)).ToString();
+            }
+            if (operador == "/")
+            {
+                txtVisor.Text = (num1 / Convert.ToDouble(txtVisor.Text)).ToString();
+            }
+            num1 = Convert.ToDouble(txtVisor.Text);
+            if (txtVisor.Text.Contains(",")){
+                alreadyDot = true;
+            }
+            else
+            {
+                alreadyDot = false;
+            }
         }
     }
 }

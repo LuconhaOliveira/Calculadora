@@ -108,6 +108,7 @@
             btnEqual.TabIndex = 0;
             btnEqual.Text = "=";
             btnEqual.UseVisualStyleBackColor = false;
+            btnEqual.Click += btnEqual_Click_1;
             // 
             // btn1
             // 

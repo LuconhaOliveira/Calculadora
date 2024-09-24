@@ -2,7 +2,6 @@ namespace Calculadora
 {
     public partial class frmLoading : Form
     {
-        int load = 0;
         public frmLoading()
         {
             InitializeComponent();
