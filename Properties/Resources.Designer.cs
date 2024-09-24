@@ -63,9 +63,9 @@ namespace Calculadora.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap hqdefault {
+        internal static System.Drawing.Bitmap acerto_de_contas {
             get {
-                object obj = ResourceManager.GetObject("hqdefault", resourceCulture);
+                object obj = ResourceManager.GetObject("acerto_de_contas", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
