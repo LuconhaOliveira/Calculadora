@@ -49,6 +49,7 @@
             btnBackSpace = new Button();
             btnDiv = new Button();
             txtVisor = new TextBox();
+            btnTransforma = new Button();
             SuspendLayout();
             // 
             // btnNegative
@@ -64,6 +65,7 @@
             btnNegative.TabIndex = 0;
             btnNegative.Text = "+-\r\n";
             btnNegative.UseVisualStyleBackColor = false;
+            btnNegative.Click += btnNegative_Click;
             // 
             // btn0
             // 
@@ -303,6 +305,7 @@
             btnPercentage.TabIndex = 0;
             btnPercentage.Text = "%";
             btnPercentage.UseVisualStyleBackColor = false;
+            btnPercentage.Click += btnPercentage_Click;
             // 
             // btnClear
             // 
@@ -358,10 +361,26 @@
             txtVisor.Multiline = true;
             txtVisor.Name = "txtVisor";
             txtVisor.ReadOnly = true;
-            txtVisor.RightToLeft = RightToLeft.Yes;
+            txtVisor.RightToLeft = RightToLeft.No;
             txtVisor.Size = new Size(322, 95);
             txtVisor.TabIndex = 1;
+            txtVisor.TextAlign = HorizontalAlignment.Right;
             txtVisor.WordWrap = false;
+            // 
+            // btnTransforma
+            // 
+            btnTransforma.Anchor = AnchorStyles.None;
+            btnTransforma.BackColor = Color.FromArgb(255, 128, 128);
+            btnTransforma.FlatStyle = FlatStyle.Popup;
+            btnTransforma.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnTransforma.ForeColor = Color.White;
+            btnTransforma.Location = new Point(5, 3);
+            btnTransforma.Name = "btnTransforma";
+            btnTransforma.Size = new Size(75, 23);
+            btnTransforma.TabIndex = 2;
+            btnTransforma.Text = "Medidas";
+            btnTransforma.UseVisualStyleBackColor = false;
+            btnTransforma.Click += btnTransforma_Click;
             // 
             // frmCalculadora
             // 
@@ -370,6 +389,7 @@
             BackgroundImage = Properties.Resources.acerto_de_contas;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(334, 511);
+            Controls.Add(btnTransforma);
             Controls.Add(txtVisor);
             Controls.Add(btnDiv);
             Controls.Add(btnMult);
@@ -392,7 +412,7 @@
             Controls.Add(btn0);
             Controls.Add(btnNegative);
             Name = "frmCalculadora";
-            Text = "frmCalculadora";
+            Text = "Calculadora Mortal";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -420,5 +440,6 @@
         private Button btnBackSpace;
         private Button btnDiv;
         private TextBox txtVisor;
+        private Button btnTransforma;
     }
 }

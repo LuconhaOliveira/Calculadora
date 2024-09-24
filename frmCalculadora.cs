@@ -132,30 +132,80 @@ namespace Calculadora
 
         private void btnEqual_Click_1(object sender, EventArgs e)
         {
-            if (operador == "+")
+            if (txtVisor.Text.Contains("%"))
             {
-                txtVisor.Text = (num1 + Convert.ToDouble(txtVisor.Text)).ToString();
+                if (operador == "+")
+                {
+                    txtVisor.Text = (num1 + (Convert.ToDouble(txtVisor.Text) / 100 * num1)).ToString();
+                }
+                if (operador == "-")
+                {
+                    txtVisor.Text = (num1 - (Convert.ToDouble(txtVisor.Text) / 100 * num1)).ToString();
+                }
+                if (operador == "*")
+                {
+                    txtVisor.Text = (num1 * (Convert.ToDouble(txtVisor.Text) / 100)).ToString();
+                }
+                if (operador == "/")
+                {
+                    txtVisor.Text = (num1 / (Convert.ToDouble(txtVisor.Text) / 100)).ToString();
+                }
             }
-            if (operador == "-")
+            else
             {
-                txtVisor.Text = (num1 - Convert.ToDouble(txtVisor.Text)).ToString();
-            }
-            if (operador == "*")
-            {
-                txtVisor.Text = (num1 * Convert.ToDouble(txtVisor.Text)).ToString();
-            }
-            if (operador == "/")
-            {
-                txtVisor.Text = (num1 / Convert.ToDouble(txtVisor.Text)).ToString();
+                if (operador == "+")
+                {
+                    txtVisor.Text = (num1 + Convert.ToDouble(txtVisor.Text)).ToString();
+                }
+                if (operador == "-")
+                {
+                    txtVisor.Text = (num1 - Convert.ToDouble(txtVisor.Text)).ToString();
+                }
+                if (operador == "*")
+                {
+                    txtVisor.Text = (num1 * Convert.ToDouble(txtVisor.Text)).ToString();
+                }
+                if (operador == "/")
+                {
+                    txtVisor.Text = (num1 / Convert.ToDouble(txtVisor.Text)).ToString();
+                }
             }
             num1 = Convert.ToDouble(txtVisor.Text);
-            if (txtVisor.Text.Contains(",")){
+            if (txtVisor.Text.Contains(","))
+            {
                 alreadyDot = true;
             }
             else
             {
                 alreadyDot = false;
             }
+        }
+
+        private void btnPercentage_Click(object sender, EventArgs e)
+        {
+            txtVisor.Text = $"{txtVisor.Text}{"%"}";
+        }
+
+        private void btnNegative_Click(object sender, EventArgs e)
+        {
+            if (txtVisor.Text == "0" || txtVisor.Text == "")
+            {
+                txtVisor.Text = "-";
+            }
+            else if (txtVisor.Text == "-")
+            {
+                txtVisor.Text = "";
+            }
+            else
+            {
+                double negativo = Convert.ToDouble(txtVisor.Text);
+                txtVisor.Text = (negativo - (negativo * 2)).ToString();
+            }
+        }
+
+        private void btnTransforma_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
