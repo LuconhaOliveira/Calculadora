@@ -63,6 +63,16 @@ namespace Calculadora.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hqdefault {
+            get {
+                object obj = ResourceManager.GetObject("hqdefault", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap utomp3_com___CHAVES_PERDIDO__O_CAMPEONATO_parte2_360P_Trim {
             get {
                 object obj = ResourceManager.GetObject("utomp3.com - CHAVES PERDIDO  O CAMPEONATO parte2_360P_Trim", resourceCulture);
