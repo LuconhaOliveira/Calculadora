@@ -22,8 +22,7 @@ namespace Calculadora
 
         private void btn0_Click(object sender, EventArgs e)
         {
-            if (txtVisor.Text == "") { }
-            else
+            if (txtVisor.Text != "0") 
             {
                 txtVisor.Text = $"{txtVisor.Text}{0}";
             }
