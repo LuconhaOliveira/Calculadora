@@ -89,5 +89,15 @@ namespace Calculadora.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap y2mate_com___CHAVES_A_venda_da_VILA_PARTE_13_480p {
+            get {
+                object obj = ResourceManager.GetObject("y2mate.com - CHAVES A venda da VILA PARTE 13_480p", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

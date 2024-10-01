@@ -22,7 +22,7 @@ namespace Calculadora
 
         private void btn0_Click(object sender, EventArgs e)
         {
-            if (txtVisor.Text != "0") 
+            if (txtVisor.Text != "0")
             {
                 txtVisor.Text = $"{txtVisor.Text}{0}";
             }
@@ -205,7 +205,12 @@ namespace Calculadora
         private void btnTransforma_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new frmMedidas().ShowDialog();
+            new frmSplashMedidas().ShowDialog();
+        }
+
+        private void frmCalculadora_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

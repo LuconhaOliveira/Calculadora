@@ -60,7 +60,7 @@
             // btnConvert
             // 
             btnConvert.Font = new Font("Comic Sans MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnConvert.Location = new Point(108, 446);
+            btnConvert.Location = new Point(110, 454);
             btnConvert.Name = "btnConvert";
             btnConvert.Size = new Size(110, 33);
             btnConvert.TabIndex = 0;
@@ -340,6 +340,7 @@
             Controls.Add(btnConvert);
             Name = "frmMedidas";
             Text = "frmMedidas";
+            FormClosed += frmMedidas_FormClosed;
             ResumeLayout(false);
             PerformLayout();
         }

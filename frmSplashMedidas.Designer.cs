@@ -1,14 +1,14 @@
 ﻿namespace Calculadora
 {
-    partial class frmLoading
+    partial class frmSplashMedidas
     {
         /// <summary>
-        ///  Required designer variable.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -23,46 +23,18 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoading));
-            pictureBox1 = new PictureBox();
-            pgbLoading = new ProgressBar();
-            label1 = new Label();
             tmrLoading = new System.Windows.Forms.Timer(components);
+            pgbLoading = new ProgressBar();
+            pictureBox1 = new PictureBox();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.utomp3_com___CHAVES_PERDIDO__O_CAMPEONATO_parte2_360P_Trim;
-            pictureBox1.Location = new Point(1, 3);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(800, 450);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            // 
-            // pgbLoading
-            // 
-            pgbLoading.Location = new Point(12, 12);
-            pgbLoading.Maximum = 7;
-            pgbLoading.Name = "pgbLoading";
-            pgbLoading.Size = new Size(776, 30);
-            pgbLoading.TabIndex = 1;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(140, 124);
-            label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 2;
-            label1.Text = "label1";
             // 
             // tmrLoading
             // 
@@ -70,7 +42,34 @@
             tmrLoading.Interval = 1000;
             tmrLoading.Tick += tmrLoading_Tick;
             // 
-            // frmLoading
+            // pgbLoading
+            // 
+            pgbLoading.Location = new Point(12, 12);
+            pgbLoading.Maximum = 7;
+            pgbLoading.Name = "pgbLoading";
+            pgbLoading.Size = new Size(776, 30);
+            pgbLoading.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.y2mate_com___CHAVES_A_venda_da_VILA_PARTE_13_480p;
+            pictureBox1.Location = new Point(3, 2);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(797, 449);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(126, 160);
+            label1.Name = "label1";
+            label1.Size = new Size(38, 15);
+            label1.TabIndex = 2;
+            label1.Text = "label2";
+            // 
+            // frmSplashMedidas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -79,10 +78,9 @@
             Controls.Add(pgbLoading);
             Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.None;
-            Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "frmLoading";
+            Name = "frmSplashMedidas";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Calculadora Mortal";
+            Text = "frmSplashMedidas";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -90,9 +88,9 @@
 
         #endregion
 
-        private PictureBox pictureBox1;
-        private ProgressBar pgbLoading;
-        private Label label1;
         private System.Windows.Forms.Timer tmrLoading;
+        private ProgressBar pgbLoading;
+        private PictureBox pictureBox1;
+        private Label label1;
     }
 }
