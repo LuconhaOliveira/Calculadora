@@ -204,7 +204,8 @@ namespace Calculadora
 
         private void btnTransforma_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            new frmMedidas().ShowDialog();
         }
     }
 }
