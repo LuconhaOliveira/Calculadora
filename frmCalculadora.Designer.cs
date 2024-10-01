@@ -412,6 +412,7 @@
             Controls.Add(btn0);
             Controls.Add(btnNegative);
             Name = "frmCalculadora";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Calculadora Mortal";
             FormClosed += frmCalculadora_FormClosed;
             ResumeLayout(false);

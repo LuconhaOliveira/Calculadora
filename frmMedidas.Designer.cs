@@ -339,6 +339,7 @@
             Controls.Add(txtCtoF);
             Controls.Add(btnConvert);
             Name = "frmMedidas";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frmMedidas";
             FormClosed += frmMedidas_FormClosed;
             ResumeLayout(false);
